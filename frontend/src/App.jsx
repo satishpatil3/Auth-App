@@ -10,11 +10,12 @@ import ProtectedRoute from './components/ProtectedRoute'
 import ForgotPassword from './pages/ForgotPassword'
 import VerifyOTP from './pages/VerifyOTP'
 import ChangePassword from './pages/ChangePassword'
+import AuthSuccess from './pages/AuthSuccess'
 
 const router=createBrowserRouter([
   {
     path:'/',
-    element:<><ProtectedRoute /><Navbar /><Home /></>
+    element:<><Navbar /><Home /></>
   },
   {
     path:'/signup',
@@ -31,6 +32,10 @@ const router=createBrowserRouter([
   {
     path:'/login',
     element:<Login />
+  },
+  {
+    path:'/auth-success',
+    element:<AuthSuccess />
   },
   {
     path:'/forgot-password',

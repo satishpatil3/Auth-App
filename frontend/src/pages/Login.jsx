@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { getData } from "@/context/UserContext";
+import Google from "../assets/googleLogo.png"
 
 const Login = () => {
   const { setUser } = getData();
@@ -148,6 +149,11 @@ const Login = () => {
                   ) : (
                     "Login"
                   )}
+                </Button>
+
+                <Button onClick={()=>window.open("http://localhost:8000/auth/google", "_self")} className='w-full' variant='outline'>
+                  <img src={Google} alt="googlelogo" className="w-5"></img>
+                  Login with Google
                 </Button>
                 <p className="text-sm text-center text-gray-600 mt-2">
                   Don't have an account?{" "}
